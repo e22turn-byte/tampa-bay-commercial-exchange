@@ -1,13 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;circle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%230c2461%22/&gt;&lt;/svg&gt;">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tampa Bay Commercial Exchange</title>
-</head>
-<body>
-    <h1>Welcome to Tampa Bay Commercial Exchange</h1>
-    <h2>Get off-market deals and local network blasts instantly.</h2>
-    <p>Sign up today for early access!</p>
-</body>
-</html>
+    <meta name="description" content="Join the exclusive Tampa Bay Commercial Exchange. Get off-market deals and local network blasts instantly.">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&amp;display=swap" rel="stylesheet"></head>
+<body class="">
+    <div class="app-container">
+        <!-- Landing Page View -->
+        <main id="landing-page" class="view active">
+            <div class="glass-card">
+                <header class="header">
+                    <h1 class="headline">Join the Tampa Bay Commercial Exchange.</h1>
+                    <p class="subheadline">
+                        Get off-market deals and local network blasts instantly.
+                    </p>
+                </header>
+                <form id="signup-form" class="signup-form" action="https://formspree.io/f/xgoobvoo" method="POST">
+                    <div class="form-group">
+                        <label for="name" class="sr-only">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Full Name" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="sr-only">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Email Address" required="">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="occupation" class="sr-only">Occupation</label>
+                            <div class="select-wrapper">
+                                <select id="occupation" name="occupation" required="">
+                                    <option value="" disabled="" selected="">Occupation</option>
+                                    <option value="Realtor">Realtor</option>
+                                    <option value="Investor">Investor</option>
+                                    <option value="Title/Lender">Title/Lender</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="license" class="sr-only">License # or Brokerage</label>
+                            <input type="text" id="license" name="license" placeholder="License # or Brokerage">
+                        </div>
+                    </div>
+                    <button type="submit" class="cta-button">Apply to Join</button>
+                </form>
+            </div>
+        </main>
+        <!-- Success Page View -->
+        <div id="success-page" class="view hidden">
+            <div class="glass-card success-card">
+                <div class="icon-circle">
+                    <!-- Clock/Hourglass Icon for Waitlist -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </div>
+                <h2>Tampa Bay Commercial Exchange</h2>
+                <h3 style="font-size: 1.25rem; font-weight: normal; margin-bottom: 1rem;">Application Received.</h3>
+                <p>You have been added to the <strong>Waiting List</strong>.</p>
+                <div style="margin: 16px 0; font-size: 0.95rem; color: #64748b;">
+                    We are currently reviewing applications to ensure the quality of the network. You will receive an
+                    email if
+                    your license is verified.
+                </div>
+                <div class="action-box">
+                    <p style="font-size: 0.9rem;">Questions?</p>
+                    <a href="mailto:admin@tampainsider.com" class="email-link">admin@tampainsider.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./main.js"></script></body></html>
